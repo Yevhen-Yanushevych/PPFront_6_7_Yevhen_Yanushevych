@@ -23,7 +23,7 @@ export default class Header extends Component {
                 width="30"
                 className="d-inline-block align-top"
                 alt="Logo"
-              />
+              />React site
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsible-navbar-nav" />
             <Navbar.Collapse id="responsible-navbar-nav">
