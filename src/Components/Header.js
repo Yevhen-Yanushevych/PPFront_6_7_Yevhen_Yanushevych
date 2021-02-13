@@ -11,8 +11,8 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from '../Pages/Home';
-import About from '../Pages/Contacts';
-import Contacts from '../Pages/About';
+import About from '../Pages/About';
+import Contacts from '../Pages/Contacts';
 import Blog from '../Pages/Blog';
 
 import logo from "./logo192.png";
