@@ -15,9 +15,26 @@ import About from '../Pages/About';
 import Contacts from '../Pages/Contacts';
 import Blog from '../Pages/Blog';
 
-import logo from "./logo192.png";
+
+import logo from "./logo194.png";
 
 export default class Header extends Component {
+
+  constructor(props){
+    super(props)
+   
+    this.OnCut = this.OnCut.bind(this)
+    
+    this.state = {counter:0}
+    
+    
+}
+
+OnCut(){
+  this.setState({counter: ++this.state.counter})
+}
+
+
   render() {
     return (
       <>
@@ -30,7 +47,7 @@ export default class Header extends Component {
                 width="30"
                 className="d-inline-block align-top"
                 alt="Logo"
-              />React site
+              />Traveler
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsible-navbar-nav" />
             <Navbar.Collapse id="responsible-navbar-nav">
@@ -39,14 +56,16 @@ export default class Header extends Component {
                 <Nav.Link href="/about">About us</Nav.Link>
                 <Nav.Link href="/contacts">Contacts</Nav.Link>
                 <Nav.Link href="/blog">Blog</Nav.Link>
+                
               </Nav>
               <Form inline>
                 <FormControl
                   type="text"
                   placeholder="Search"
                   className="mr-sm-2"
+                  onCut={this.OnCut}
                 />
-                <Button variant="outline-info">Search</Button>
+                <Button variant="outline-info" >Search (Cut:{this.state.counter})</Button>
               </Form>
             </Navbar.Collapse>
           </Container>
